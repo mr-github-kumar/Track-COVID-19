@@ -380,6 +380,25 @@ const App = () => {
       },
     };
   });
+  
+  const chartStyles = makeStyles((theme) => {
+    return {
+      root: {
+        background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+        borderRadius: 3,
+        border: 0,
+        color: "black",
+        width: "100%",
+        height:"100%",
+        boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+        padding: "0px",
+        textAlign:"center",
+        [theme.breakpoints.between('sm', 'md')]: {
+          height:"270px",
+        },
+      },
+    };
+  });
 
   const tableStyles = makeStyles({
     root: {
@@ -387,13 +406,15 @@ const App = () => {
       width:"100%",
       borderRadius: 5,
       color: "black",
-      padding: "5px",
-      border:0,
+      padding: "0px",
+      border: 0,
+      textAlign:"center",
     },
   });
 
   const drop = dropdownStyles();
   const list = tableStyles();
+  const chart = chartStyles();
    
   return (
     <div className="app">
@@ -521,9 +542,9 @@ const App = () => {
               </Paper>  
             </div>
             <div className="app-chart">
-              <Paper classes={{ root: list.root, }}
+              <Paper classes={{ root: chart.root, }}
               elevation={24}>
-                <h3>Trends for last 120 days</h3>
+                <h3> Trends for last 120 days</h3>
                 <LineGraph
                   className="graphChartsCard"
                   casesType={casesType}

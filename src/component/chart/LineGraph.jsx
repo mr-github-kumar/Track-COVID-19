@@ -27,7 +27,7 @@ const options = {
       {
         type: "time",
         time: {
-          format: "MM/DD/YY",
+          parser: "MM/DD/YY",
           tooltipFormat: "ll",
         },
       },
@@ -90,14 +90,13 @@ function LineGraph({ casesType, countryCode, color }) {
   });
 
   const LineDiv = styled.div({
-    backgroundColor:'red',
     cursor: "pointer",
-    height: "270px",
+    height: "100%",
     padding: ".5rem",
     width: "100%",
     background: "linear-gradient(#a1c4fd,#c2e9fb)",
     margin: "5px 0 0 0",
-    borderRadius:"5px",
+    borderRadius: "5px",
   });
 
   return (
