@@ -1,0 +1,60 @@
+.infoBox:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.infoBox--selected {
+  border-top: 10px solid greenyellow;
+}
+
+.infoBox--red {
+  border-color: red;
+}
+
+.infoBox__cases--green {
+  color: lightgreen !important;
+}
+
+.infoBox__cases {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.hospCases {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.infoBox__total {
+  color: #e4edf5;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+}
+
+.card {
+  transition: transform 0.2s; /* Animation */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  /* (150% zoom - Note: if the zoom is too large,
+   it will go outside of the viewport) */
+}
+
+.card-header {
+  padding: 0;
+  width: 100%;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 47%;
+    height: 128px;
+  }
+}

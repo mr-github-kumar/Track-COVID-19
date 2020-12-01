@@ -1,0 +1,25 @@
+.table {
+  width: 100%;
+  height: 270px;
+  margin: 5px 0 0 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  color: black;
+  border-radius: 5px;
+  border: 0;
+  background: linear-gradient(#89f7fe, #66a6ff);
+}
+
+.table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table td {
+  padding: 0.5rem;
+  border: none;
+}
+
+.table tr:nth-of-type(odd) {
+  background: linear-gradient(#a1c4fd, #c2e9fb);
+}
